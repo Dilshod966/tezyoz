@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    border-bottom: 0.5px solid rgb(185, 185, 185);
+}
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+.tugma {
+    color: black;
+    margin-right: 12px;
+    padding: 6px 12px;
+    height: 30px;
+    border-radius: 9px;
+}
+.tugma:hover {
+    background-color: white;
+}
+
+
+.tugma img{
+    height: 30px;
+    margin-right: 8px;
+}
+
+.logotip {
+    width: 400px;
+    font-size: 22px;
+}
+.logotip img {
+    height: 42px;
+}
+
+#yoniq {
+    color: white;
+    border-radius: 9px;
+    background-color: black;
+
+}
+
+nav select {
+    width: 70px;
+    text-align: center;
+    height: 42px;
+    padding: 6px 12px;
+    background: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select option {
+    text-align: start;
+}
+
+main {
+    background-color: white;
+    margin: 30px;
+    padding: 35px 30px;
+    box-shadow: 0 0 5px rgb(205, 205, 205);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    width: 1000px;
+}
+
+main span {
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 0.5px solid rgb(206, 206, 206);
+    margin-right: 10px;
+}
+
+.tugma2 {
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: 0 0 4px rgb(171, 171, 171);
+}
+
+.tugma2 img {
+    height: 20px;
+    margin-right: 6px;
+}
+
+.tugma2:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+main > div:nth-child(1) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main > div:nth-child(1) div {
+    display: flex;
+    align-items: center;
+}
+
+main > div:nth-child(2) {
+    border: 3px dotted rgb(198, 198, 198);
+    padding: 25px 20px;
+    color: rgb(198, 198, 198);
+    font-size: 25px;
+    border-radius: 15px;
+}
+
+main > div {
+    margin-bottom: 25px;
+}
+
+main h4 {
+    margin-bottom: 10px;
+}
+
+.senter > h1 {
+    margin-top: 25px;
+}
+
+.senter > p {
+    margin-top: 10px;
+
+}
+.senter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sign {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(136, 136, 136);
+    padding: 25px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.sign h5 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.sign input {
+    font-size: 16px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 2px 7px;
+    box-shadow:  0 1px 3px rgb(167, 167, 167);
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.sign label {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tugma3 {
+    cursor: pointer;
+    padding: 2px 7px;
+    font-size: 19px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+.tugma3:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.sign p {
+    text-align: center;
+    color: rgb(113, 113, 113);
+    margin-top: 15px;
+}
+
+.sign p a {
+    text-decoration: none;
+    color: black;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+.keng {
+    width: 800px;
+}
+
+.flexcha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flexcha span:nth-child(2) {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 7px;
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+    padding: 3px 5px;
+}
+.flexcha span:nth-child(1) {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.natija {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    border: 1px solid rgb(174, 174, 174);
+    border-radius: 13px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+}
+
+.natija > div:nth-child(1) {
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.natija > div:nth-child(1) p {
+    margin-top: 0;
+    text-align: start;
+    font-weight: 600;
+    color: black;
+}
+
+.natija > div:nth-child(1) div {
+    margin-right: 20px;
+}
+
+.natija > div:nth-child(2) {
+    text-align: end;
+}
+
+
+.natija span {
+    color: rgb(95, 95, 95);
+    font-size: 14px;
+} 
+
+.natija img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+.top3 {
+    box-shadow: 0 0 3px yellowgreen;
+    background-image: linear-gradient(to right,rgb(247, 247, 152), white);
+}
+
+
+nav div a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+
+.tugma4 {
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(167, 167, 167);
+    padding: 8px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
+
+.tugma4:hover {
+    background-color: rgb(255, 255, 255);;
+}
+
+h5 ~ span {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.vaqt span {
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 7px;
+    padding: 3px 5px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+.gridcha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-rows: 40px 40px;
+}
+
+.gridcha div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menyucha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menyucha div:nth-child(1) p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+.menyucha ~ hr {
+    margin: 15px 0;
+}
+
+.tugma2 {
+    display: flex;
+    align-items: center;
+}
+
+
+.suruvchi1 {
+    background-color: rgb(192, 192, 192);
+    width: 45px;
+    height: 25px;
+    border-radius: 13px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1px 2px;
+    align-items: center;
+}
+
+.suruvchi2 {
+    width: 23px;
+    height: 23px;
+    border-radius: 12px;
+    background-color: rgb(233, 233, 233);
+}
+
+.kulrang span {
+    color: rgb(147, 147, 147);
+}
+
+.kulrang span:nth-child(2) {
+    font-size: 15px;
+}
+
+.kulrang > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.kulrang > div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+
+.jadval h4 {
+    margin-bottom: 25px;
+}
+
+
+
+.jadval table {
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+.jadval table th {
+    text-align: start;
+    padding: 12px 0;
+}
+
+.jadval table td {
+    padding: 12px 0;
+}
+
+.jadval table tr {
+    border-bottom: 0.5px solid rgb(192, 192, 192);
+    
+}
+
+
+.jadval table span {
+    
+}

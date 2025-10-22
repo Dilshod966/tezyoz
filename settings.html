@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ro'yhatdan O'tish</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logotip">
+            <a href="./index.html">
+                <img src="./image/icons8-keyboard-96.png" alt="klavyatura"><p>TezYoz</p>
+            </a>
+        </div>
+        <div>
+            <a href="./index.html">
+                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b>Test</b></div>
+            </a>
+            <a href="./reyting.html">
+                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b>Reyting</b></div>
+            </a>
+            <a href="./settings.html">
+                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b>Sozlamalar</b></div>
+            </a>
+        </div>
+        <div>
+            <select name="" id="" class="tugma">
+                <option value="" selected disabled hidden>Rejim</option>
+                <option value=""><b>Yorug'</b></option>
+                <option value=""><b>Qorong'u</b></option>
+            </select>
+            <select name="" id="" class="tugma">
+                <option value="" selected disabled hidden>Til</option>
+                <option value="">O'zbek</option>
+                <option value="">English</option>
+                <option value="">Русский</option>
+            </select>
+            <a href="./signin.html"><div class="tugma">Kirish</div></a>
+            <a href="./signup.html"><div class="tugma" id="yoniq">Ro'yhatdan o'tish</div></a>
+        </div>
+    </nav>
+
+    <div class="senter">
+        <h1>Sozlamalar</h1>
+        <p>Yozish tajribangizni sozlang</p>
+
+        <div class="sign keng">
+            <h5>Test turi</h5>
+            <div>
+                <div class="tugma4">Vaqt rejimi</div>
+                <div class="tugma4">So'z rejimi</div>
+            </div>
+            <span>Vaqt rejimi</span>
+            <div class="vaqt">
+                <span>15s</span><span>30s</span><span>60s</span><span>120s</span>
+            </div>
+        </div>
+
+        <div class="sign keng">
+            <h5>Matn tili</h5>
+            <div class="gridcha">
+                <div class="tugma4">O'zbek</div>
+                <div class="tugma4">English</div>
+                <div class="tugma4">Русский</div>
+                <div class="tugma4">Espanol</div>
+                <div class="tugma4">Francais</div>
+                <div class="tugma4">Deutsch</div>
+            </div>
+        </div>
+        
+
+        <div class="sign keng">
+            <h5>Ko‘rinish</h5>
+            <div class="menyucha">
+                <div>
+                    <span>Jonli so'z/Daq</span>
+                    <p>Matn terish tezligini real vaqtda ko‘rsatish</p>
+                </div>
+                <div class="suruvchi1" onclick="surish(0)">
+                    <div class="suruvchi2"></div>
+                </div>
+            </div>
+            <hr>
+            <div class="menyucha">
+                <div>
+                    <span>Ovoz effektlari</span>
+                    <p>Tugma bosish va yakunlash ovozlari</p>
+                </div>
+                <div class="suruvchi1" onclick="surish(1)">
+                    <div class="suruvchi2"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="sign keng">
+            <div class="menyucha">
+                <div>
+                    <span>Sozlamalarni tiklash</span>
+                    <p>Standart sozlamalarni tiklash</p>
+                </div>
+                <div class="tugma2"><img src="./image/icons8-restart-50.png"> Qayta o'rnatish</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./index.js"></script>
+    </body>
+</html>
