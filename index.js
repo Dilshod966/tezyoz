@@ -24,17 +24,26 @@ let body = document.body;
 let nav = document.getElementsByTagName('nav')[0];
 let tugma = document.getElementsByClassName('tugma');
 let tanlovRejim = document.getElementById('tanlovRejim');
-
-
-
-
+let yoniq = document.getElementById('yoniq');
+let main = document.getElementsByTagName('main')[0];
+let Mainspan = document.querySelectorAll('main span');
+let tugma2 = document.getElementsByClassName('tugma2');
+let odiyuq = document.querySelector('main > div:nth-child(2)')
+let sign = document.getElementsByClassName('sign');
 function kun() {
     body.style.backgroundColor = `rgb(240, 240, 240)`;
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
     siklcolor(tugma,'black');
     siklhover(tugma,'white','rgba(0, 0, 0, 0)');
-
-    
+    yoniq.style.backgroundColor = 'black';
+    main.style.backgroundColor = 'white';
+    siklBorder(Mainspan,'rgb(206, 206, 206)');
+    siklBoxShadow(tugma2,'0 0 4px rgb(171, 171, 171)');
+    siklhover(tugma2,'rgb(219, 219, 219)','rgba(0, 0, 0, 0)')
+    odiyuq.style.borderColor = 'rgb(198, 198, 198)';
+    odiyuq.style.color = 'rgb(198, 198, 198)';
+    siklBackcolor(sign,'white');
+    siklBoxShadow(sign,'0 0 10px rgb(136, 136, 136)')
 }
 
 
@@ -56,6 +65,24 @@ function siklBackcolor(a,c) {
         i++;
     }
 }
+
+function siklBorder(a,c) {
+    let i = 0;
+    while(a[i] != undefined) {
+        a[i].style.borderColor = c;
+        i++;
+    }
+}
+function siklBoxShadow(a,c) {
+    let i = 0;
+    while(a[i] != undefined) {
+        a[i].style.boxShadow = c;
+        i++;
+    }
+}
+
+
+
 
 function siklhover(a,c1,c2) {
     let i = 0;
