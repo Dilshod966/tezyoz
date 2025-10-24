@@ -21,18 +21,41 @@ function surish(a) {
 
 
 let body = document.body;
-let nav = document.getElementsByTagName('nav');
+let nav = document.getElementsByTagName('nav')[0];
 let tugma = document.getElementsByClassName('tugma');
 let tanlovRejim = document.getElementById('tanlovRejim');
 
+
+
+
+function kun() {
+    body.style.backgroundColor = `rgb(240, 240, 240)`;
+    nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
+
+}
+
+
+
+
+
+
+
+
+
+function tun() {
+
+}
+
+
+
+
+
 tanlovRejim.addEventListener('change', ()=>{
     if(tanlovRejim.value == "tun") {
-        body.style.backgroundColor = 'black';
-        body.style.color = 'white';
+        tun()
     }
     else {
-
+        kun()
     }
     
 })
-
