@@ -31,10 +31,9 @@ let tanlovRejim = document.getElementById('tanlovRejim');
 function kun() {
     body.style.backgroundColor = `rgb(240, 240, 240)`;
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
-
+    sikl(tugma,'black');
+    
 }
-
-
 
 
 
@@ -47,6 +46,24 @@ function tun() {
 }
 
 
+
+
+
+
+function siklcolor(a,c) {
+    let i = 0;
+    while(a[i] != undefined) {
+        a[i].style.color = c;
+        i++;
+    }
+}
+function siklBackcolor(a,c) {
+    let i = 0;
+    while(a[i] != undefined) {
+        a[i].style.backgroundColor = c;
+        i++;
+    }
+}
 
 
 
