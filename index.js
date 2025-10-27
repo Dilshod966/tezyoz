@@ -30,6 +30,8 @@ let Mainspan = document.querySelectorAll('main span');
 let tugma2 = document.getElementsByClassName('tugma2');
 let odiyuq = document.querySelector('main > div:nth-child(2)')
 let sign = document.getElementsByClassName('sign');
+let input = document.querySelectorAll('.sign input');
+let tugma3 = document.getElementsByClassName('tugma3');
 function kun() {
     body.style.backgroundColor = `rgb(240, 240, 240)`;
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
@@ -43,7 +45,9 @@ function kun() {
     odiyuq.style.borderColor = 'rgb(198, 198, 198)';
     odiyuq.style.color = 'rgb(198, 198, 198)';
     siklBackcolor(sign,'white');
-    siklBoxShadow(sign,'0 0 10px rgb(136, 136, 136)')
+    siklBoxShadow(sign,'0 0 10px rgb(136, 136, 136)');
+    siklBoxShadow(input,'0 1px 3px rgb(167, 167, 167)')
+    siklcolor(tugma3,'white');
 }
 
 
