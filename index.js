@@ -11,8 +11,6 @@ function surish(a) {
         tugmacha.style.justifyContent = 'flex-start'
         tugmacha.style.backgroundColor = 'rgb(192, 192, 192)'
     }
-    
-    
 }
 
 
