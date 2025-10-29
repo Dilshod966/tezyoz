@@ -44,6 +44,22 @@ let suruvchi1 = document.getElementsByClassName('suruvchi1');
 let suruvchi2 = document.getElementsByClassName('suruvchi2');
 let kulrangSpan = document.querySelectorAll('.kulrang span');
 let trlar = document.querySelectorAll('.jadval table tr');
+let rasmlar = document.querySelectorAll('nav img');
+let h1lar = document.querySelector('.senter > h1')
+let Plar = document.querySelector('.senter > p');
+let LogoP = document.querySelector('.logotip p');
+rasmanzil = [
+    ['icons8-keyboard-96 (1).png','icons8-keyboard-96 (1).png','icons8-cup-60 (1).png','icons8-settings-24 (1).png','icons8-settings-24 (1).png'],
+    ['icons8-keyboard-96.png','icons8-keyboard-96.png','icons8-cup-60.png','icons8-settings-24.png','icons8-settings-24.png']
+]
+function rasmChange(a,c) {
+    let i=0;
+    while(a[i] != undefined) {
+        a[i].setAttribute('src',`./image/${c=='tun'? rasmanzil[0][i] : rasmanzil[1][i]}`);
+        i++;
+    }
+}   
+
 
 
 
@@ -53,6 +69,7 @@ function kun() {
     siklcolor(tugma,'black');
     siklhover(tugma,'white','rgba(0, 0, 0, 0)');
     yoniq.style.backgroundColor = 'black';
+    rasmChange(rasmlar,'kun');
     if(main != undefined) {
         main.style.backgroundColor = 'white';
     }
@@ -90,18 +107,24 @@ function kun() {
     siklBackcolor(suruvchi2,'rgb(233, 233, 233)');
     siklcolor(kulrangSpan,'rgb(147, 147, 147)');
     siklBorderBottom(trlar,'rgb(192, 192, 192)');
+    LogoP.style.color = 'black';
 
 }
 
 
 function tun() {
-    body.style.backgroundColor = 'rgb(240, 240, 240)'
+    body.style.backgroundColor = 'black'
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
-    siklcolor(tugma,'black');
-    siklhover(tugma,'white','rgba(0, 0, 0, 0)');
-    yoniq.style.backgroundColor = 'black';
+    siklcolor(tugma,'white');
+    siklhover(tugma,'rgba(45, 45, 45, 1)','rgba(0, 0, 0, 0)');
+    yoniq.style.backgroundColor = 'white';
+    yoniq.style.color = 'black';
+    rasmChange(rasmlar,'tun');
+    h1lar.style.color = 'white';
+    LogoP.style.color = 'white';
+    Plar.style.color = 'white';
     if(main != undefined) {
-        main.style.backgroundColor = 'white';
+        main.style.backgroundColor = 'rgba(26, 26, 26, 1)';
     }
     siklBorder(Mainspan,'rgba(6, 1, 1, 1)');
     siklBoxShadow(tugma2,'0 0 4px rgb(171, 171, 171)');
@@ -111,7 +134,7 @@ function tun() {
          odiyuq.style.color = 'rgb(198, 198, 198)';
     }
     
-    siklBackcolor(sign,'white');
+    siklBackcolor(sign,'rgba(26, 26, 26, 1)');
     siklBoxShadow(sign,'0 0 10px rgb(136, 136, 136)');
     siklBoxShadow(input,'0 1px 3px rgb(167, 167, 167)')
     siklcolor(tugma3,'white');
@@ -122,6 +145,7 @@ function tun() {
    if(flexchaSpan != undefined) {
      flexchaSpan.style.borderColor = 'rgb(104, 104, 104)';
     flexchaSpan.style.color = 'rgb(66, 66, 66)';
+
    }
     siklBorder(naticha,"rgb(174, 174, 174)");
     siklcolor(natijaP,'black');
