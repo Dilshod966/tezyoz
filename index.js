@@ -238,5 +238,21 @@ tanlovRejim.addEventListener('change', ()=>{
     else {
         kun()
     }
+
+    localStorage.setItem('rejim',tanlovRejim.value);
     
 })
+
+if(localStorage.getItem('rejim')) {
+
+    let novidir = localStorage.getItem('rejim');
+    if(novidir == 'tun') {
+        tun();
+    }
+    else if(novidir == 'kun') {
+        kun();
+    }
+    setTimeout(()=>{
+        localStorage.removeItem('rejim');
+    },10000)
+}
