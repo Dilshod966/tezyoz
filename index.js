@@ -52,10 +52,14 @@ rasmanzil = [
     ['icons8-keyboard-96 (1).png','icons8-keyboard-96 (1).png','icons8-cup-60 (1).png','icons8-settings-24 (1).png','icons8-settings-24 (1).png'],
     ['icons8-keyboard-96.png','icons8-keyboard-96.png','icons8-cup-60.png','icons8-settings-24.png','icons8-settings-24.png']
 ]
-function rasmChange(a,c) {
+rasmanzilIndex = [
+    ['icons8-settings-24 (1).png','icons8-restart-50 (1).png'],
+    ['icons8-settings-24.png','icons8-restart-50.png']
+]
+function rasmChange(a,b,c) {
     let i=0;
     while(a[i] != undefined) {
-        a[i].setAttribute('src',`./image/${c=='tun'? rasmanzil[0][i] : rasmanzil[1][i]}`);
+        a[i].setAttribute('src',`./image/${c=='tun'? b[0][i] : b[1][i]}`);
         i++;
     }
 }   
@@ -69,7 +73,7 @@ function kun() {
     siklcolor(tugma,'black');
     siklhover(tugma,'white','rgba(0, 0, 0, 0)');
     yoniq.style.backgroundColor = 'black';
-    rasmChange(rasmlar,'kun');
+    rasmChange(rasmlar,rasmanzil,'kun');
     yoniq.style.color = 'white';
     h1lar.style.color = 'black';
     LogoP.style.color = 'black';
@@ -77,7 +81,10 @@ function kun() {
     if(main != undefined) {
         main.style.backgroundColor = 'white';
     }
-    siklBorder(Mainspan,'rgba(6, 1, 1, 1)');
+    siklBorder(Mainspan,'rgb(206, 206, 206)');
+    siklcolor(Mainspan,'black');
+    siklcolor(tugma2,'black');
+    rasmChange(tugma2Image,rasmanzilIndex,'kun');
     siklBoxShadow(tugma2,'0 0 4px rgb(171, 171, 171)');
     siklhover(tugma2,'rgb(219, 219, 219)','rgba(0, 0, 0, 0)')
     if(odiyuq != undefined) {
@@ -114,7 +121,7 @@ function kun() {
     LogoP.style.color = 'black';
 
 }
-
+let tugma2Image = document.querySelectorAll('.tugma2 img')
 
 function tun() {
     body.style.backgroundColor = 'black';
@@ -123,14 +130,17 @@ function tun() {
     siklhover(tugma,'rgba(45, 45, 45, 1)','rgba(0, 0, 0, 0)');
     yoniq.style.backgroundColor = 'white';
     yoniq.style.color = 'black';
-    rasmChange(rasmlar,'tun');
+    rasmChange(rasmlar,rasmanzil,'tun');
     h1lar.style.color = 'white';
     LogoP.style.color = 'white';
     Plar.style.color = 'white';
     if(main != undefined) {
         main.style.backgroundColor = 'rgba(26, 26, 26, 1)';
     }
-    siklBorder(Mainspan,'rgba(6, 1, 1, 1)');
+    siklBorder(Mainspan,'rgba(150, 150, 150, 1)');
+    siklcolor(Mainspan,'rgba(150, 150, 150, 1)');
+    siklcolor(tugma2,'white');
+    rasmChange(tugma2Image,rasmanzilIndex,'tun');
     siklBoxShadow(tugma2,'0 0 4px rgb(171, 171, 171)');
     siklhover(tugma2,'rgb(219, 219, 219)','rgba(0, 0, 0, 0)')
     if(odiyuq != undefined) {
