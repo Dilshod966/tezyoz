@@ -70,6 +70,10 @@ function kun() {
     siklhover(tugma,'white','rgba(0, 0, 0, 0)');
     yoniq.style.backgroundColor = 'black';
     rasmChange(rasmlar,'kun');
+    yoniq.style.color = 'white';
+    h1lar.style.color = 'black';
+    LogoP.style.color = 'black';
+    Plar.style.color = 'black';
     if(main != undefined) {
         main.style.backgroundColor = 'white';
     }
@@ -113,7 +117,7 @@ function kun() {
 
 
 function tun() {
-    body.style.backgroundColor = 'black'
+    body.style.backgroundColor = 'black';
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
     siklcolor(tugma,'white');
     siklhover(tugma,'rgba(45, 45, 45, 1)','rgba(0, 0, 0, 0)');
@@ -252,7 +256,5 @@ if(localStorage.getItem('rejim')) {
     else if(novidir == 'kun') {
         kun();
     }
-    setTimeout(()=>{
-        localStorage.removeItem('rejim');
-    },10000)
+    
 }
