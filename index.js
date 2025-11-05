@@ -135,7 +135,7 @@ function tun() {
     body.style.backgroundColor = 'black';
     nav.style.borderBottom = '0.5px solid rgb(185, 185, 185);'
     siklcolor(tugma,'white');
-    siklhover(tugma,'white','rgba(0, 0, 0, 0)');
+    siklhover(tugma,'rgba(82, 82, 82, 1)','rgba(0, 0, 0, 0)');
     yoniq.style.backgroundColor = 'white';
     yoniq.style.color = 'black';
     rasmChange(rasmlar,rasmanzil,'tun');
@@ -283,3 +283,78 @@ if(localStorage.getItem('rejim')) {
     }
     
 }
+
+
+
+
+
+let til = document.getElementById('til');
+let tilcha = document.getElementsByClassName('tilcha')
+
+
+
+function tilrunning(bet,t) {
+    let i=0;
+    while(tilcha[i] != undefined) {
+        tilcha[i].innerHTML = sozlar[bet][t][i];
+        i++;
+    }
+}
+
+
+sozlar = [
+    [
+        ['Bosh Sahifa','Test','Reyting','Sozlamalar','Rejim',`Yorug'`,`Qorong'u`,'Til','Kirish',`Ro'yhatdan o'tish`,'Tezligingizni Sinab Ko‘ring','Matn terish tezligingizni tekshiring va reytingda yuqoriga ko‘tariling!','soniya','Matn Tili','Sozlamalar',`Qayta o'rnatish`,'Yozishni boshlash uchun matn maydonini bosing','Birinchi harfni bosganingizda test avtomatik boshlanadi'],
+        ['Home','Test','Rating','Settings','Mode','Light','Dark','Language','Login','Register','Test Your Speed','Check your typing speed and climb up the rankings!','seconds','Text Language','Settings','Reset','Click the text field to start typing','The test will start automatically when you click the first letter'],
+        ["Домашняя страница", "тест", "рейтинг", "настройки", "режим", "яркий", "темный", "язык", "вход", "регистрация", "проверьте свою скорость набора текста", "проверьте свою скорость набора текста и поднимитесь в рейтинге!",'секунды','язык текста',`Настройки`,'Сброс настроек','щелкните текстовое поле, чтобы начать запись', 'тест запускается автоматически при нажатии на первую букву']
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ],
+    [
+        [],
+        [],
+        []
+    ]
+]
+
+
+
+
+
+
+function tilozgar(a) {
+    if(til.value == "ru") {
+        tilrunning(a,2);
+    }
+    else if(til.value == 'eng') {
+       tilrunning(a,1);
+    }
+    else if(til.value == 'uz') {
+       tilrunning(a,0);
+    }
+    else {
+        alert('Bunday til yuq');
+    }
+}
+
+
+
+

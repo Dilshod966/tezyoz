@@ -154,6 +154,10 @@ main h4 {
     display: flex;
     flex-direction: column;
     width: 450px;
+    
+}
+.tilcha {
+    text-align: center;
 }
 
 .sign h5 {
