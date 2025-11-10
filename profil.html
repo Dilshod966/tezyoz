@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Kirish</title>
+    <title class="tilcha">Kirish</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -15,35 +15,36 @@
         </div>
         <div>
             <a href="./index.html">
-                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b>Test</b></div>
+                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b class="tilcha">Test</b></div>
             </a>
             <a href="./reyting.html">
-                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b>Reyting</b></div>
+                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b class="tilcha">Reyting</b></div>
             </a>
             <a href="./settings.html">
-                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b>Sozlamalar</b></div>
+                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b class="tilcha">Sozlamalar</b></div>
             </a>
         </div>
         <div>
             <select name="" id="tanlovRejim" class="tugma">
-                <option value="" selected disabled hidden>Rejim</option>
-                <option value="kun"><b>Yorug'</b></option>
-                <option value="tun"><b>Qorong'u</b></option>
+                <option value="" selected disabled hidden class="tilcha">Rejim</option>
+                <option value="kun"><b class="tilcha">Yorug'</b></option>
+                <option value="tun"><b class="tilcha">Qorong'u</b></option>
             </select>
-            <select name="" id="" class="tugma">
-                <option value="" selected disabled hidden>Til</option>
-                <option value="">O'zbek</option>
-                <option value="">English</option>
-                <option value="">Русский</option>
+            <select name="" id="til" class="tugma"  onchange="tilozgar(1)">
+                <option value="" selected disabled hidden class="tilcha">Til</option>
+                <option value="uz">O'zbek</option>
+                <option value="eng">English</option>
+                <option value="ru">Русский</option>
             </select>
-            <a href="./signin.html"><div class="tugma">Kirish</div></a>
-            <a href="./signup.html"><div id="yoniq">Ro'yhatdan o'tish</div></a>
+            <a href="./signin.html"><div class="tugma tilcha">Kirish</div></a>
+            <a href="./signup.html"><div id="yoniq" class="tilcha">Ro'yhatdan o'tish</div></a>
+         
         </div>
     </nav>
 
    <div class="senter">
-        <h1>Profilingiz</h1>
-        <p>Yozishdagi yutuqlaringiz va rivojlanishingizni kuzatib boring</p>
+        <h1 class="tilcha">Profilingiz</h1>
+        <p class="tilcha">Yozishdagi yutuqlaringiz va rivojlanishingizni kuzatib boring</p>
 
         <div class="sign keng kulrang">
             <div>
@@ -53,20 +54,20 @@
                     <span><b>account@gmail.com</b></span>
                 </div>
             </div>
-            <span>Qo'shilgan sana: 10/13/2025</span>
+            <span >  <label for="" class="tilcha">Qo'shilgan sana</label>: 10/13/2025</span>
         </div>
 
         <div class="sign keng jadval">
-            <h4>Test tarixi natijalari: 1</h4>
+            <h4 class="tilcha">Test tarixi natijalari: 1</h4>
             <table>
                 <tr>
-                    <th>Sana</th>
-                    <th>So'z/daq</th>
-                    <th>Aniqlik</th>
-                    <th>Xatolar</th>
-                    <th>Test turi</th>
-                    <th>Matn tili</th>
-                    <th>Test davomiyligi</th>
+                    <th class="tilcha">Sana</th>
+                    <th class="tilcha">So'z/daq</th>
+                    <th class="tilcha">Aniqlik</th>
+                    <th class="tilcha">Xatolar</th>
+                    <th class="tilcha">Test turi</th>
+                    <th class="tilcha">Matn tili</th>
+                    <th class="tilcha">Test davomiyligi</th>
                 </tr>
                 <tr>
                     <td>

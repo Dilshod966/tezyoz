@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Kirish</title>
+    <title class="tilcha">Kirish</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -15,43 +15,43 @@
         </div>
         <div>
             <a href="./index.html">
-                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b>Test</b></div>
+                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b class="tilcha">Test</b></div>
             </a>
             <a href="./reyting.html">
-                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b>Reyting</b></div>
+                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b class="tilcha">Reyting</b></div>
             </a>
             <a href="./settings.html">
-                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b>Sozlamalar</b></div>
+                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b class="tilcha">Sozlamalar</b></div>
             </a>
         </div>
         <div>
             <select name="" id="tanlovRejim" class="tugma">
-                <option value="" selected disabled hidden>Rejim</option>
-                <option value="kun"><b>Yorug'</b></option>
-                <option value="tun"><b>Qorong'u</b></option>
+                <option value="" selected disabled hidden class="tilcha">Rejim</option>
+                <option value="kun"><b class="tilcha">Yorug'</b></option>
+                <option value="tun"><b class="tilcha">Qorong'u</b></option>
             </select>
-            <select name="" id="" class="tugma">
-                <option value="" selected disabled hidden>Til</option>
-                <option value="">O'zbek</option>
-                <option value="">English</option>
-                <option value="">Русский</option>
+            <select name="" id="til" class="tugma" onchange="tilozgar(4)">
+                <option value="" selected disabled hidden class="tilcha">Til</option>
+                <option value="uz">O'zbek</option>
+                <option value="eng">English</option>
+                <option value="ru">Русский</option>
             </select>
-            <a href="./signin.html"><div class="tugma">Kirish</div></a>
-            <a href="./signup.html"><div class="tugma" id="yoniq">Ro'yhatdan o'tish</div></a>
+            <a href="./signin.html"><div class="tugma tilcha" >Kirish</div></a>
+            <a href="./signup.html"><div class="tugma tilcha" id="yoniq">Ro'yhatdan o'tish</div></a>
         </div>
     </nav>
 
     <div class="senter">
-        <h1>Qaytib kelganingizdan xursandmiz</h1>
-        <p>Taraqqiyotingizni kuzatish uchun tizimga kiring!</p>
+        <h1 class="tilcha">Qaytib kelganingizdan xursandmiz</h1>
+        <p class="tilcha">Taraqqiyotingizni kuzatish uchun tizimga kiring!</p>
         <div class="sign">
-            <h5>Kirish</h5>
-            <label for="pochta">Email</label>
+            <h5 class="tilcha">Kirish</h5>
+            <label for="pochta" class="tilcha">Email</label>
             <input type="email" id="pochta" placeholder="Email manzilingizni kiriting..">
-            <label for="parol">Password</label>
+            <label for="parol" class="tilcha">Password</label>
             <input type="password" id="parol" placeholder="Parolingizni kiriting..">
-            <div class="tugma3">Kirish</div>
-            <p>Hali ro'yhatdan o'tmadingizmi? <a href="./signup.html">Ro'yhatdan o'tish</a></p>
+            <div class="tugma3 tilcha">Kirish</div>
+            <p><span class="tilcha">Hali ro'yhatdan o'tmdingizmi? </span><a href="./signup.html" class="tilcha">Ro'yhatdan o'tish</a></p>
         </div>
     </div>
 

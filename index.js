@@ -289,7 +289,7 @@ if(localStorage.getItem('rejim')) {
 
 
 let til = document.getElementById('til');
-let tilcha = document.getElementsByClassName('tilcha')
+let tilcha = document.getElementsByClassName('tilcha');
 
 
 
@@ -309,30 +309,96 @@ sozlar = [
         ["Домашняя страница", "тест", "рейтинг", "настройки", "режим", "яркий", "темный", "язык", "вход", "регистрация", "проверьте свою скорость набора текста", "проверьте свою скорость набора текста и поднимитесь в рейтинге!",'секунды','язык текста',`Настройки`,'Сброс настроек','щелкните текстовое поле, чтобы начать запись', 'тест запускается автоматически при нажатии на первую букву']
     ],
     [
-        [],
-        [],
-        []
+        ['Kirish','Test','Reyting','Sozlamalar','Rejim',`Yorug'`,`Qorong'u`,'Til','Kirish',`Ro'yhatdan o'tish`,'Profilingiz','Yozishdagi yutuqlaringiz va rivojlanishingizni kuzatib boring',`Qo'shilgan sana`,'Test tarixi natijalari','Sana', `So'z/daq`,'Aniqlik','Xatolar','Test turi','Matn tili','Test davomiyligi',],
+        ['Access','Test','Rating','Settings','Mode','Light','Dark','Language','Sign in','Register','Profil','Track your progress and progress in writing', 'Date Added', 'Test history results','Date', 'Word / min', 'Accuracy', 'Errors','Test type', 'Text language', 'Test duration',],
+        ['Войти', 'Tест', 'Pейтинг', 'Hастройки', 'Pежим', 'свет', 'темнота', 'язык', 'доступ', 'Регистрация','Профиль','Oтслеживать свой прогресс и прогресс в написании', 'дата добавления', 'Результаты истории испытаний','Дата', 'Cлово/ Mин','Tочность','Oшибки','Tип теста','язык текста', 'продолжительность теста',]
     ],
     [
-        [],
-        [],
-        []
+        ['Bosh Sahifa','Test','Reyting','Sozlamalar','Rejim',`Yorug'`,`Qorong'u`,'Til','Kirish',`Ro'yhatdan o'tish`,`Eng yaxshi yozuvchilar`,`Boshqalar bilan qanday taqqoslashingizni ko'ring`,`Best WPM reytinglar`,`raqobatchilar`],
+        ['Home','Test','Rating','Settings','Mode','Light','Dark','Language','Login','Register','Top Writers',`See how you compare to others`,
+        `Best WPM ratings`,`Competitors`],
+        ["Главная страница", "Тест", "Рейтинг", "Настройки", "Режим", "Светлый", "Темный", "Язык", "Вход", "Регистрация", "Лучшие авторы",
+        "Посмотрите, как вы сравниваете себя с другими", "Лучшие рейтинги WPM",`Конкуренты`]
     ],
     [
-        [],
-        [],
-        []
+        [`Ro'yhatdan O'tish`,'Test','Reyting','Sozlamalar','Rejim','Yorug',`Qorong'u`,'Til','Kirish',`Ro'yhatdan o'tish`,'Sozlamalar','Yozish tajribangizni sozlang','Test turi','Vaqt rejimi',`So'z rejimi`,'Vaqt rejimi','Matn tili',`Ko‘rinish`,`Jonli so'z/Daq`,`Matn terish tezligini real vaqtda ko‘rsatish`,'Ovoz effektlari','Tugma bosish va yakunlash ovozlari','Sozlamalarni tiklash','Standart sozlamalarni tiklash',`Qayta o'rnatish`],
+        [`Register`,'Test','rating','settings','mode','Light',`Dark`,'Language','Login',`register`,'Settings','customize your writing experience','Test Type','Time Mode',`word Mode`,'Time Mode','Text language',`View`,`Live word/min`,`Real-Time display of typing speed`,`sound effects`,'button press and finish voices','Reset Settings','default reset settings','reset'],
+        ["Регистрация", "тест", "рейтинг", "настройки", "режим", "светлый", "темный", "язык", "вход", "регистрация", "настройки", "настройте свой опыт набора текста", "тип теста", " режим времени", "Режим слова", "режим времени", "язык текста", "внешний вид", "живое слово/мин", "отображение скорости набора текста в реальном времени", "звуковые эффекты", "звуки нажатия кнопки и завершения", "сброс настроек", "сброс настроек по умолчанию", `Сброс`]
     ],
     [
-        [],
-        [],
-        []
+        ['Kirish','Test','Reyting','Sozlamalar',`Yorug'`,`Qorong'u`,'Til','Rejim',`Ro'yhatdan o'tish`,'Qaytib kelganingizdan xursandmiz','Taraqqiyotingizni kuzatish uchun tizimga kiring!','Kirish','Email','Password','Kirish',`Hali ro'yhatdan o'tmadingizmi?`,`Ro'yhatdan o'tish`],
+        ['Enter','Test','Rating','Settings','Light','Dark','Language','Mode','Login','Register',`We're glad you're back`,'Login to track your progress!','Login','Email','Password','Login','Not registered yet','Register'],
+        ['Вход', 'Тест', 'Рейтинг', 'Настройки', 'Светлый', 'Тёмный', 'Язык', 'Режим', 'Вход', 'Регистрация', 'Мы рады вашему возвращению', 'Войдите, чтобы отслеживать свой прогресс!', 'Вход', 'Эл. почта', 'Пароль', 'Вход', 'Ещё не зарегистрирован', 'Регистрация'],
+    ],          
+    [
+    [
+      `Ro'yhatdan O'tish`,
+      "Test",
+      "Reyting",
+      "Sozlamalar",
+      "Rejim",
+      `Yorug'`,
+      `Qorong'u`,
+      "Til",
+      "Kirish",
+      `Ro'yhatdan o'tish`,
+      "Xush Kelibsiz",
+      `Tizimdan to'liq foydalanish uchun ro'yhatdan o'ting!`,
+      `Ro'yhatdan o'tish`,
+      "Ism",
+      "Email",
+      "Yangi Parol",
+      "Takroriy parol",
+      `Ro'yhatdan o'tish`,
+      `Ilgari ro'yhatdan o'tganmisiz?`,
+      "Kirish"
     ],
     [
-        [],
-        [],
-        []
-    ]
+      `Register`,
+      "Test",
+      "Rating",
+      "Settings",
+      "Mode",
+      "Light",
+      "Dark",
+      "Language",
+      "Login",
+      `Register`,
+      "Welcome",
+      "Register to use the system fully!",
+      `Register`,
+      "Name",
+      "Email",
+      "New Password",
+      "Repeat password",
+      `Register`,
+      `Have you registered before?`,
+      "Login"
+    ],
+
+    [
+      `Регистрация`,
+      "Тест",
+      "Рейтинг",
+      "Настройки",
+      "Режим",
+      "Светлый",
+      "Темный",
+      "Язык",
+      "Вход",
+      `Регистрация`,
+      "Добро пожаловать",
+      "Зарегистрируйтесь, чтобы пользоваться системой в полной мере!",
+      `Регистрация`,
+      "Имя",
+      "Электронная почта",
+      "Новый пароль",
+      "Повторите пароль",
+      `Регистрация`,
+      `Вы уже регистрировались?`,
+      "Вход"
+    ],
+  ]
 ]
 
 
@@ -356,5 +422,14 @@ function tilozgar(a) {
 }
 
 
-
-
+let umumiyvaqt = 5;
+let maydon = document.getElementById('maydon');
+let time = document.getElementById('vaqt');
+maydon.addEventListener('keydown',(k)=>{
+    time.style.display = 'block';
+    time.style.animation = `vaqtcha ${umumiyvaqt}s linear`;
+    setTimeout(()=>{
+        time.style.display = 'none';
+        time.style.animation = ``;
+    },umumiyvaqt*1000);
+})

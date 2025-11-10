@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title class="tilcha">Reyting</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -15,43 +15,43 @@
         </div>
         <div>
             <a href="./index.html">
-                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b>Test</b></div>
+                <div class="tugma"><img src="./image/icons8-keyboard-96.png" alt=""><b class="tilcha">Test</b></div>
             </a>
             <a href="./reyting.html">
-                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b>Reyting</b></div>
+                <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b class="tilcha">Reyting</b></div>
             </a>
             <a href="./settings.html">
-                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b>Sozlamalar</b></div>
+                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b class="tilcha">Sozlamalar</b></div>
             </a>
         </div>
         <div>
             <select name="" id="tanlovRejim" class="tugma">
-                <option value="" selected disabled hidden>Rejim</option>
-                <option value="kun"><b>Yorug'</b></option>
-                <option value="tun"><b>Qorong'u</b></option>
+                <option value="" selected disabled hidden class="tilcha">Rejim</option>
+                <option value="kun"><b class="tilcha">Yorug'</b></option>
+                <option value="tun"><b class="tilcha">Qorong'u</b></option>
             </select>
-            <select name="" id="" class="tugma">
-                <option value="" selected disabled hidden>Til</option>
-                <option value="">O'zbek</option>
-                <option value="">English</option>
-                <option value="">Русский</option>
+            <select name="" id="til" class="tugma" onchange="tilozgar(2)">
+                <option value="" selected disabled hidden class="tilcha">Til</option>
+                <option value="uz">O'zbek</option>
+                <option value="eng">English</option>
+                <option value="ru">Русский</option>
             </select>
-            <a href="./signin.html"><div class="tugma">Kirish</div></a>
-            <a href="./signup.html"><div class="tugma" id="yoniq">Ro'yhatdan o'tish</div></a>
+            <a href="./signin.html"><div class="tugma tilcha">Kirish</div></a>
+            <a href="./signup.html"><div class="tugma tilcha" id="yoniq">Ro'yhatdan o'tish</div></a>
         </div>
     </nav>
 
 
     <div class="senter">
-        <h1>Eng yaxshi yozuvchilar</h1>
-        <p>Boshqalar bilan qanday taqqoslashingizni ko'ring</p>
+        <h1 class="tilcha">Eng yaxshi yozuvchilar</h1>
+        <p class="tilcha">Boshqalar bilan qanday taqqoslashingizni ko'ring</p>
         <div class="sign keng">
             <div class="flexcha">
-                <span>
+                <span class="tilcha">
                     Best WPM reytinglar
                 </span>
                 <span>
-                    10 raqobatchilar
+                    10 <label class="tilcha">raqobatchilar</label>
                 </span>
             </div>
 
@@ -61,7 +61,7 @@
                     <div><img src="" alt=""></div>
                     <div>
                         <p>Nikname</p>
-                        <span>1 tugallanga test</span>
+                        <span>1 tugallangan test</span>
                     </div>
                 </div>
                 <div>
