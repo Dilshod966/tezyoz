@@ -425,11 +425,91 @@ function tilozgar(a) {
 let umumiyvaqt = 5;
 let maydon = document.getElementById('maydon');
 let time = document.getElementById('vaqt');
+let sekunds = document.getElementById('sekunds');
+let ishlaganlik = false;
+let qadam = 0;
 maydon.addEventListener('keydown',(k)=>{
-    time.style.display = 'block';
-    time.style.animation = `vaqtcha ${umumiyvaqt}s linear`;
+    
+
+    if(k.key!='Shift' && k.key!='Control' && k.key!='Tab' && k.key!='CapsLock'&& k.key!='Alt'&& k.key!='Meta'&& k.key!='Backspace'){
+        if(k.key == document.querySelectorAll('#gaplar span')[qadam].innerHTML) {
+        document.querySelectorAll('#gaplar span')[qadam].style.backgroundColor = 'rgba(166, 208, 153, 1)';
+        document.querySelectorAll('#gaplar span')[qadam].style.color ='green';
+    }
+    else {
+        document.querySelectorAll('#gaplar span')[qadam].style.backgroundColor = 'rgba(236, 175, 168, 1)';
+         document.querySelectorAll('#gaplar span')[qadam].style.color = 'red';
+        
+    }
+    qadam++;
+    
+
+
+
+
+    if(!ishlaganlik) {
+        anime();
+        time.style.display = 'block';
+        time.style.animation = `vaqtcha ${umumiyvaqt}s linear`;
+    }
+    else {
+        ishlaganlik = true;
+    }
+    }
+    else if(k.key == 'Backspace'&& qadam > 0){
+        console.log(qadam)
+        qadam--;
+        document.querySelectorAll('#gaplar span')[qadam].style.backgroundColor = 'white';
+        document.querySelectorAll('#gaplar span')[qadam].style.color = 'rgb(198, 198, 198)';
+    }
+})
+
+
+function anime() {
+    let sanoq = umumiyvaqt;
+    sekunds.style.display = 'inline';
     setTimeout(()=>{
         time.style.display = 'none';
         time.style.animation = ``;
+        sekunds.style.display = 'none';
+        ishlaganlik = true;
     },umumiyvaqt*1000);
-})
+        sekunds.innerHTML = sanoq;
+        sanoq--;
+    setInterval(()=>{
+        sekunds.innerHTML = sanoq;
+        sanoq--;
+    },1000);
+    ishlaganlik = true;
+}
+
+
+let gap = [
+    'Bugungi kunda texnologiya inson hayotining ajralmas qismiga aylangan. Har bir sohada zamonaviy texnikalar ishlatilmoqda. Telefonlar, kompyuterlar va internet yordamida odamlar o‘z ishlarini osonlashtirishmoqda. O‘quvchilar bilim olish uchun onlayn darslarga qatnashishadi, tadbirkorlar esa onlayn savdo orqali daromad topishmoqda. Texnologiya vaqtni tejaydi, lekin uni to‘g‘ri ishlatish juda muhim. Chunki noto‘g‘ri foydalanish insonni dangasa qiladi.',
+    'Tabiat — bu bizning hayotimizning asosi. Daraxtlar havoni tozalaydi, daryolar suv beradi, hayvonlar esa ekologik muvozanatni saqlaydi. Inson tabiatni asrashi, unga zarar yetkazmasligi kerak. Afsuski, ayrim odamlar chiqindilarni tashlab, daraxtlarni kesishadi. Shuning uchun bolalarga yoshlikdan tabiatni sevish, unga g‘amxo‘rlik qilishni o‘rgatish zarur. Chunki tabiat bizning uyimizdir.',
+    'Mehnatsevar inson har doim hurmatga sazovor bo‘ladi. U o‘z oldiga maqsad qo‘yadi va uni bajarish uchun harakat qiladi. Mehnat orqali inson o‘z hayotini o‘zgartiradi, tajriba orttiradi va mustaqil bo‘ladi. Har bir muvaffaqiyat ortida tinimsiz mehnat turadi. Kimdir san’at sohasida, kimdir texnikada, boshqasi esa o‘qishda yutuqqa erishadi. Muhimi, dangasalikdan uzoq bo‘lib, doimo harakatda bo‘lishdir.',
+    'Kitob inson tafakkurini kengaytiradi, so‘z boyligini oshiradi. Kitob o‘qigan odam boshqalardan farqli fikrlaydi, nutqi chiroyli bo‘ladi. Bugun internet davrida ko‘pchilik telefon bilan band, ammo kitob o‘qishning o‘rni beqiyos. Har kuni kamida bir necha sahifa kitob o‘qish odatini shakllantirish lozim. Kitob bizni to‘g‘ri yo‘lga boshlaydi va hayotda to‘g‘ri qaror qabul qilishga yordam beradi.',
+    'Do‘stlik — hayotdagi eng qimmat tuyg‘ulardan biri. Chin do‘st har doim yoningda bo‘ladi, yordam beradi va senga ishonadi. Do‘stlar o‘zaro hurmat, sadoqat va ishonch asosida munosabat qurishadi. Har kimga ham do‘st deb bo‘lmaydi, shuning uchun do‘st tanlashda ehtiyot bo‘lish kerak. Yaxshi do‘st seni yomon ishlardan qaytaradi va to‘g‘ri yo‘lga boshlaydi.',
+    'Har bir insonning o‘z orzusi bor. Kimdir shifokor, kimdir muhandis, boshqasi esa o‘qituvchi bo‘lishni xohlaydi. Orzular hayotga ma’no beradi, insonni oldinga undaydi. Lekin orzuga erishish uchun faqat xohlash yetarli emas, mehnat qilish kerak. Har kuni oz bo‘lsa ham harakat qilgan odam albatta muvaffaqiyatga erishadi. Shuning uchun hech qachon taslim bo‘lmaslik lozim.'
+]
+
+
+
+
+let gaplarBox = document.getElementById('gaplar');
+
+
+let randomNumber = Math.floor(Math.random()*100);
+
+while(randomNumber>=gap.length) {
+    randomNumber = Math.floor(Math.random()*100);
+}
+
+
+
+
+for(let i=0; i<gap[randomNumber].length;i++) {
+    let newspan = document.createElement('span');
+    newspan.innerHTML = gap[randomNumber][i];
+    gaplarBox.appendChild(newspan);
+}
