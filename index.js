@@ -787,9 +787,10 @@ function anime() {
         KanditsianerPulti = [];
     }
 
+    document.getElementsByClassName('testing')[0].style.display = 'none';
+    document.getElementById('natija').innerHTML = resoultElement(umumiyvaqt,togriSozlar,notogriSozlar)
 
-
-    console.log("togrilari:",togriSozlar," va  Xatolari:",notogriSozlar);
+    
   }, umumiyvaqt * 1000);
   sekunds.innerHTML = sanoq;
   sanoq--;
@@ -821,4 +822,38 @@ for (let i = 0; i < gap[randomNumber].length; i++) {
   let newspan = document.createElement("span");
   newspan.innerHTML = gap[randomNumber][i];
   gaplarBox.appendChild(newspan);
+}
+
+
+
+
+function resoultElement(vaqt, togri, notogri) {
+  let a = [
+    ['yaxshi', './image/smile/kulib-removebg-preview.png'],
+    ['norm','./image/smile/hafa-removebg-preview.png'],
+    ['yomon', './image/smile/Jahli-removebg-preview.png']
+  ];
+  let b;
+  if(togri*60/vaqt >= 22) {
+    b=0;
+  }
+  else if(togri*60/vaqt >= 14) {
+    b=1;
+  }
+  else {
+    b=2;
+  }
+
+
+
+  return `      <div id="${a[b][0]}"  class="resoult">
+                    <h2>Natijangiz..</h2>
+                    <ul>
+                        <li>Tezlik: ${togri*60/vaqt} so'z/min</li>
+                        <li>To'g'ri so'zlar: ${togri} ta</li>
+                        <li>Noto'g'ri so'zlar: ${notogri} ta</li>
+                        <li>Vaqt: ${vaqt}s</li>
+                    </ul>
+                    <img src="${a[b][1]}" alt="">
+                </div>`
 }
