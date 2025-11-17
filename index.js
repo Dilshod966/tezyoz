@@ -757,13 +757,15 @@ maydon.addEventListener("keydown", (k) => {
       ishlaganlik = true;
     }
   } else if (k.key == "Backspace" && qadam > 0) {
-    console.log(qadam);
+    
+    KanditsianerPulti.pop();
     qadam--;
     document.querySelectorAll("#gaplar span")[qadam].style.backgroundColor =
       "white";
     document.querySelectorAll("#gaplar span")[qadam].style.color =
       "rgb(198, 198, 198)";
   }
+  console.log(KanditsianerPulti);
 });
 
 function anime() {

@@ -487,3 +487,47 @@ h5 ~ span {
     border-radius: 0;
     letter-spacing: 2px;
 }
+
+
+.resoult {
+    position: relative;
+    width: 300px;
+    font-size: 18px;
+    border-radius: 15px;
+    padding: 15px 10px 40px 10px;
+}
+
+.resoult h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.resoult li {
+    padding: 3px 2px;
+}
+
+.resoult ul {
+    padding: 0 35px;
+}
+
+.resoult img {
+    position: absolute;
+    width: 90px;
+    right: 20px;
+    bottom: 5px;
+}
+
+#yomon {
+    border: 1px solid red;
+    background-image: radial-gradient(rgb(255, 213, 213),white);
+}
+
+#norm {
+    border: 1px solid orange;
+    background-image: radial-gradient(rgb(255, 237, 204),white);
+}
+
+#yaxshi {
+    border: 1px solid green;
+    background-image: radial-gradient(rgb(167, 224, 167),white);
+}
