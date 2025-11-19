@@ -72,6 +72,24 @@ function rasmChange(a, b, c) {
 }
 
 function kun() {
+  let smile = document.getElementsByClassName("resoult")[0];
+  let smile1 = document.getElementById("yaxshi");
+  let smile2 = document.getElementById("norm");
+  let smile3 = document.getElementById("yomon");
+
+  if (smile1 != undefined) {
+    smile1.style.backgroundImage = "radial-gradient(rgb(167, 224, 167),white)";
+  }
+  if (smile2 != undefined) {
+    smile2.style.backgroundImage = "radial-gradient(rgb(255, 237, 204),white)";
+  }
+  if (smile3 != undefined) {
+    smile3.style.backgroundImage = "radial-gradient(rgb(255, 213, 213),white)";
+  }
+  if (smile != undefined) {
+    smile.style.color = "black";
+  }
+
   body.style.backgroundColor = "rgb(240, 240, 240)";
   nav.style.borderBottom = "0.5px solid rgb(185, 185, 185);";
   siklcolor(tugma, "black");
@@ -136,7 +154,25 @@ let tugma2Image = document.querySelectorAll(".tugma2 img");
 let mainh4 = document.querySelector("main > div h4");
 let mainP = document.querySelector("main > div p");
 let minut = document.getElementById("vaqt");
+
 function tun() {
+  let smile = document.getElementsByClassName("resoult")[0];
+  let smile1 = document.getElementById("yaxshi");
+  let smile2 = document.getElementById("norm");
+  let smile3 = document.getElementById("yomon");
+
+  if (smile1 != undefined) {
+    smile1.style.backgroundImage = "radial-gradient(rgba(45, 90, 45, 1),black)";
+  }
+  if (smile2 != undefined) {
+    smile2.style.backgroundImage = "radial-gradient(rgba(97, 83, 56, 1),black)";
+  }
+  if (smile3 != undefined) {
+    smile3.style.backgroundImage = "radial-gradient(rgba(99, 36, 36, 1),black)";
+  }
+  if (smile != undefined) {
+    smile.style.color = "white";
+  }
   if (minut != undefined) {
     minut.style.backgroundColor = "white";
   }
@@ -568,7 +604,7 @@ sozlar = [
       `Qorong'u`,
       "Til",
       "Rejim",
-      'Kirish',
+      "Kirish",
       `Ro'yhatdan o'tish`,
       "Qaytib kelganingizdan xursandmiz",
       "Taraqqiyotingizni kuzatish uchun tizimga kiring!",
@@ -713,7 +749,6 @@ let togriSozlar = 0;
 let notogriSozlar = 0;
 let KanditsianerPulti = [];
 maydon.addEventListener("keydown", (k) => {
-    
   if (
     k.key != "Shift" &&
     k.key != "Control" &&
@@ -724,29 +759,26 @@ maydon.addEventListener("keydown", (k) => {
     k.key != "Backspace"
   ) {
     if (k.key == document.querySelectorAll("#gaplar span")[qadam].innerHTML) {
-    if(k.key != ' ') {
+      if (k.key != " ") {
         KanditsianerPulti.push(1);
-    }
-    else {
-        if(KanditsianerPulti.includes(0)) {
-            notogriSozlar++;
-        }
-        else {
-            togriSozlar++;
+      } else {
+        if (KanditsianerPulti.includes(0)) {
+          notogriSozlar++;
+        } else {
+          togriSozlar++;
         }
         KanditsianerPulti = [];
-    }
+      }
       document.querySelectorAll("#gaplar span")[qadam].style.backgroundColor =
         "rgba(166, 208, 153, 1)";
       document.querySelectorAll("#gaplar span")[qadam].style.color = "green";
     } else {
-        KanditsianerPulti.push(0);
+      KanditsianerPulti.push(0);
       document.querySelectorAll("#gaplar span")[qadam].style.backgroundColor =
         "rgba(236, 175, 168, 1)";
       document.querySelectorAll("#gaplar span")[qadam].style.color = "red";
     }
-    
-    
+
     qadam++;
 
     if (!ishlaganlik) {
@@ -757,7 +789,6 @@ maydon.addEventListener("keydown", (k) => {
       ishlaganlik = true;
     }
   } else if (k.key == "Backspace" && qadam > 0) {
-    
     KanditsianerPulti.pop();
     qadam--;
     document.querySelectorAll("#gaplar span")[qadam].style.backgroundColor =
@@ -765,7 +796,6 @@ maydon.addEventListener("keydown", (k) => {
     document.querySelectorAll("#gaplar span")[qadam].style.color =
       "rgb(198, 198, 198)";
   }
-  console.log(KanditsianerPulti);
 });
 
 function anime() {
@@ -777,27 +807,49 @@ function anime() {
     sekunds.style.display = "none";
     ishlaganlik = true;
 
-    if(gap[randomNumber][qadam] == ' ') {
-         if(KanditsianerPulti.includes(0)) {
-            notogriSozlar++;
-        }
-        else {
-            togriSozlar++;
-        }
-        KanditsianerPulti = [];
+    if (gap[randomNumber][qadam] == " ") {
+      if (KanditsianerPulti.includes(0)) {
+        notogriSozlar++;
+      } else {
+        togriSozlar++;
+      }
+      KanditsianerPulti = [];
     }
 
-    document.getElementsByClassName('testing')[0].style.display = 'none';
-    document.getElementById('natija').innerHTML = resoultElement(umumiyvaqt,togriSozlar,notogriSozlar)
-
-    
+    document.getElementsByClassName("testing")[0].style.display = "none";
+    document.getElementById("natija").innerHTML = resoultElement(
+      umumiyvaqt,
+      togriSozlar,
+      notogriSozlar
+    );
+    document.getElementById("natija").style.display = "block";
+    if (localStorage.getItem("rejim")) {
+      let novidir = localStorage.getItem("rejim");
+      if (novidir == "tun") {
+        tun();
+      } else if (novidir == "kun") {
+        kun();
+      }
+    }
+    else {
+      if(tanlovRejim.value == 'tun') {
+        tun()
+      }
+      else {
+        kun()
+      }
+    }
   }, umumiyvaqt * 1000);
   sekunds.innerHTML = sanoq;
   sanoq--;
-  setInterval(() => {
+  let intervalcha = setInterval(() => {
     sekunds.innerHTML = sanoq;
     sanoq--;
+    if (sanoq <= 0) {
+      clearInterval(intervalcha);
+    }
   }, 1000);
+
   ishlaganlik = true;
 }
 
@@ -824,36 +876,52 @@ for (let i = 0; i < gap[randomNumber].length; i++) {
   gaplarBox.appendChild(newspan);
 }
 
+function retext() {
+  document.getElementById("gaplar").innerHTML = "";
+  qadam = 0;
+  ishlaganlik = false;
+  KanditsianerPulti = [];
+  togriSozlar=0;
+  notogriSozlar=0;
+  let randomNumber = Math.floor(Math.random() * 100);
 
+  while (randomNumber >= gap.length) {
+    randomNumber = Math.floor(Math.random() * 100);
+  }
 
+  for (let i = 0; i < gap[randomNumber].length; i++) {
+    let newspan = document.createElement("span");
+    newspan.innerHTML = gap[randomNumber][i];
+    gaplarBox.appendChild(newspan);
+  }
+
+  document.getElementsByClassName("testing")[0].style.display = "block";
+  document.getElementById("natija").style.display = "none";
+}
 
 function resoultElement(vaqt, togri, notogri) {
   let a = [
-    ['yaxshi', './image/smile/kulib-removebg-preview.png'],
-    ['norm','./image/smile/hafa-removebg-preview.png'],
-    ['yomon', './image/smile/Jahli-removebg-preview.png']
+    ["yaxshi", "./image/smile/kulib-removebg-preview.png"],
+    ["norm", "./image/smile/hafa-removebg-preview.png"],
+    ["yomon", "./image/smile/Jahli-removebg-preview.png"],
   ];
   let b;
-  if(togri*60/vaqt >= 22) {
-    b=0;
+  if ((togri * 60) / vaqt >= 22) {
+    b = 0;
+  } else if ((togri * 60) / vaqt >= 14) {
+    b = 1;
+  } else {
+    b = 2;
   }
-  else if(togri*60/vaqt >= 14) {
-    b=1;
-  }
-  else {
-    b=2;
-  }
-
-
 
   return `      <div id="${a[b][0]}"  class="resoult">
                     <h2>Natijangiz..</h2>
                     <ul>
-                        <li>Tezlik: ${togri*60/vaqt} so'z/min</li>
+                        <li>Tezlik: ${(togri * 60) / vaqt} so'z/min</li>
                         <li>To'g'ri so'zlar: ${togri} ta</li>
                         <li>Noto'g'ri so'zlar: ${notogri} ta</li>
                         <li>Vaqt: ${vaqt}s</li>
                     </ul>
                     <img src="${a[b][1]}" alt="">
-                </div>`
+                </div>`;
 }
