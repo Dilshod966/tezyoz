@@ -748,7 +748,8 @@ let qadam = 0;
 let togriSozlar = 0;
 let notogriSozlar = 0;
 let KanditsianerPulti = [];
-maydon.addEventListener("keydown", (k) => {
+if(maydon != undefined) {
+  maydon.addEventListener("keydown", (k) => {
   if (
     k.key != "Shift" &&
     k.key != "Control" &&
@@ -797,6 +798,7 @@ maydon.addEventListener("keydown", (k) => {
       "rgb(198, 198, 198)";
   }
 });
+}
 
 function anime() {
   let sanoq = umumiyvaqt;
@@ -870,10 +872,12 @@ while (randomNumber >= gap.length) {
   randomNumber = Math.floor(Math.random() * 100);
 }
 
-for (let i = 0; i < gap[randomNumber].length; i++) {
+if(gaplarBox != undefined) {
+  for (let i = 0; i < gap[randomNumber].length; i++) {
   let newspan = document.createElement("span");
   newspan.innerHTML = gap[randomNumber][i];
   gaplarBox.appendChild(newspan);
+}
 }
 
 function retext() {
