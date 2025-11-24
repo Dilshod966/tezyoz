@@ -929,3 +929,18 @@ function resoultElement(vaqt, togri, notogri) {
                     <img src="${a[b][1]}" alt="">
                 </div>`;
 }
+
+
+
+
+let pas1 = document.getElementById('pas1');
+let pas2 = document.getElementById('pas2');
+let xatolik = document.getElementsByClassName('xatolik');
+
+function register() {
+  if(pas1.value != pas2.value) {
+    pas2.style.border = "1px solid red";
+    xatolik[3].innerHTML = 'Takroriy parol mos emas!';
+    xatolik[3].style.visibility = 'visible';
+  }
+} 

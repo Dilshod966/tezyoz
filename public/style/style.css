@@ -531,3 +531,14 @@ h5 ~ span {
     border: 1px solid green;
     background-image: radial-gradient(rgb(167, 224, 167),white);
 }
+
+
+.xatolik {
+    margin: 0;
+    display: block;
+    text-align: center;
+    color: red;
+    position: relative;
+    bottom: 28px;
+    visibility: hidden;
+}

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="tilcha">Bosh Sahifa</title>
     <link rel="stylesheet" href="./style/style.css">
 </head>
+
 <body>
 
 
@@ -14,7 +16,8 @@
     <nav>
         <div class="logotip">
             <a href="./index.html">
-                <img src="./image/icons8-keyboard-96.png" alt="klavyatura"><p>TezYoz</p>
+                <img src="./image/icons8-keyboard-96.png" alt="klavyatura">
+                <p>TezYoz</p>
             </a>
         </div>
         <div>
@@ -25,7 +28,8 @@
                 <div class="tugma"><img src="./image/icons8-cup-60.png" alt=""><b class="tilcha">Reyting</b></div>
             </a>
             <a href="./settings.html">
-                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b class="tilcha">Sozlamalar</b></div>
+                <div class="tugma"><img src="./image/icons8-settings-24.png" alt=""><b class="tilcha">Sozlamalar</b>
+                </div>
             </a>
         </div>
         <div>
@@ -40,45 +44,50 @@
                 <option value="eng">English</option>
                 <option value="ru">Русский</option>
             </select>
-            <a href="./signin.html"><div class="tugma tilcha">Kirish</div></a>
-            <a href="./signup.html"><div  id="yoniq" class="tilcha">Ro'yhatdan o'tish</div></a>
+            <a href="./signin.html">
+                <div class="tugma tilcha">Kirish</div>
+            </a>
+            <a href="./signup.html">
+                <div id="yoniq" class="tilcha">Ro'yhatdan o'tish</div>
+            </a>
         </div>
     </nav>
 
-<div class="senter">
+    <div class="senter">
         <h1 class="tilcha">Tezligingizni Sinab Ko‘ring</h1>
         <p class="tilcha">Matn terish tezligingizni tekshiring va reytingda yuqoriga ko‘tariling!</p>
         <div id="flex_start">
             <div id="vaqt"></div>
         </div>
-    <main>
-        <div>
+        <main>
             <div>
-                <span>30 <label class="tilcha">soniya</label></span>
-                <span class="tilcha">Matn Tili</span>
-                <span id="sekunds"></span>
+                <div>
+                    <span>30 <label class="tilcha">soniya</label></span>
+                    <span class="tilcha">Matn Tili</span>
+                    <span id="sekunds"></span>
+                </div>
+                <div>
+                    <div class="tugma2"><img src="./image/icons8-settings-24.png"> <label
+                            class="tilcha">Sozlamalar</label></div>
+                    <div class="tugma2" onclick="retext()"><img src="./image/icons8-restart-50.png"> <label
+                            class="tilcha">Qayta o'rnatish</label></div>
+                </div>
+            </div>
+            <div class="testing">
+                <label id="gaplar">
+
+                </label>
+
+                <input type="text" id="maydon">
+            </div>
+            <div id="natija">
             </div>
             <div>
-                <div class="tugma2"><img src="./image/icons8-settings-24.png"> <label class="tilcha">Sozlamalar</label></div>
-                <div class="tugma2" onclick="retext()"><img src="./image/icons8-restart-50.png"> <label class="tilcha">Qayta o'rnatish</label></div>
+                <h4 class="tilcha">Yozishni boshlash uchun matn maydonini bosing</h4>
+                <p class="tilcha">Birinchi harfni bosganingizda test avtomatik boshlanadi</p>
             </div>
-        </div>
-        <div class="testing">
-            <label id="gaplar">
-                
-            </label>
-            
-            <input type="text" id="maydon" >
-        </div>
-        <div id="natija">
-                
-            </div>
-        <div>
-            <h4 class="tilcha">Yozishni boshlash uchun matn maydonini bosing</h4>
-            <p class="tilcha">Birinchi harfni bosganingizda test avtomatik boshlanadi</p>
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
 
 
 
@@ -91,8 +100,9 @@
 
 
 
-    
+
 
     <script src="./index.js"></script>
 </body>
+
 </html>
