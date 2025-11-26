@@ -9,31 +9,38 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 // 🔗 MongoDB Atlas bilan ulan
-mongoose.connect("mongodb+srv://bohodirovdilshod3_db_user:D5724251@cluster0.um5d4gi.mongodb.net/?appName=Cluster0")
+mongoose
+  .connect(
+    "mongodb+srv://bohodirovdilshod3_db_user:D5724251@cluster0.um5d4gi.mongodb.net/?appName=Cluster0"
+  )
   .then(() => console.log("✅ MongoDB ulandi"))
-  .catch(err => console.log(err));
+  .catch((err) => console.log(err));
 
 // 📦 Schema yaratamiz
 const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String
+  nameValue: String,
+  emailValue: String,
+  password: String,
 });
 
 const User = mongoose.model("User", userSchema);
 // 📨 signup API
 app.post("/signup", async (req, res) => {
-  const { name, email, password } = req.body;
-
+  const { nameValue, emailValue, password } = req.body;
+  const user = new User({ nameValue, emailValue, password });
   try {
-    const user = new User({ name, email, password });
-    await user.save();
-    res.json({ message: "Foydalanuvchi saqlandi!" });
+    let tek = await User.findOne({ emailValue });
+    if (!tek) {
+      await user.save();
+      res.json({ message: true });
+    }
+    else {
+      res.json({ message: false });
+    }
   } catch (err) {
     res.status(500).json({ error: "Xatolik yuz berdi" });
   }
 });
-
 
 app.post("/signin", async (req, res) => {
   const { email, password } = req.body;
@@ -54,4 +61,6 @@ app.post("/signin", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("🚀 Server http://localhost:3000 da ishlamoqda"));
+app.listen(3000, () =>
+  console.log("🚀 Server http://localhost:3000 da ishlamoqda")
+);
