@@ -33,7 +33,13 @@ async function register() {
               alert(data.error);
             }
             if(data.message) {
+              localStorage.setItem("name", nameValue)
               window.location.href = 'index.html'
+            }
+            else {
+              email.style.border = "1px solid red";
+              xatolik[1].innerHTML = "Bunday email oldin ishlatilgan!";
+              xatolik[1].style.visibility = "visible";
             }
           }
         } else {

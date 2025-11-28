@@ -542,3 +542,7 @@ h5 ~ span {
     bottom: 28px;
     visibility: hidden;
 }
+
+#profil {
+    display: none;
+}

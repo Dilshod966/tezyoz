@@ -933,3 +933,14 @@ function resoultElement(vaqt, togri, notogri) {
 
 
 
+let userLoc =  document.querySelectorAll('#til ~ a');
+
+if(localStorage.getItem("name")) {
+    userLoc[0].style.display = 'none';
+    userLoc[1].style.display = 'none';
+    document.getElementById('user').innerHTML = localStorage.getItem('name');
+    document.getElementById('profil').style.display = 'block';
+    
+}
+
+

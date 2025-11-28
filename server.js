@@ -48,14 +48,14 @@ app.post("/signin", async (req, res) => {
   try {
     const user = await User.findOne({ email });
     if (!user) {
-      return res.json({ error: "Bunday email topilmadi!" });
+      return res.json({ message: false });
     }
 
-    if (user.password !== password) {
-      return res.json({ error: "Parol noto‘g‘ri!" });
+    if (user.password != password) {
+      return res.json({ message: 0 });
     }
 
-    res.json({ message: "Kirish muvaffaqiyatli!", name: user.name });
+    res.json({ message: true , odi: user.name});
   } catch (err) {
     res.status(500).json({ error: "Xatolik yuz berdi" });
   }
