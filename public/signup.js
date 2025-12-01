@@ -33,8 +33,7 @@ async function register() {
               alert(data.error);
             }
             if(data.message) {
-              localStorage.setItem("name", nameValue)
-              window.location.href = 'index.html'
+              window.location.href = 'signin.html'
             }
             else {
               email.style.border = "1px solid red";

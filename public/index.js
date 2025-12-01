@@ -739,7 +739,7 @@ function tilozgar(a) {
   }
 }
 
-let umumiyvaqt = 15;
+let umumiyvaqt = 30;
 let maydon = document.getElementById("maydon");
 let time = document.getElementById("vaqt");
 let sekunds = document.getElementById("sekunds");
@@ -940,7 +940,43 @@ if(localStorage.getItem("name")) {
     userLoc[1].style.display = 'none';
     document.getElementById('user').innerHTML = localStorage.getItem('name');
     document.getElementById('profil').style.display = 'block';
-    
 }
 
 
+let vaqtlar = document.querySelectorAll('.vaqt > span');
+let oxirgibosilgan=1;
+let k = 0;
+while(vaqtlar[k] != undefined) {
+  let s=k;
+  if(localStorage.getItem('vaqt')) {
+    if(localStorage.getItem('vaqt') == Number(vaqtlar[s].innerHTML.slice(0,(vaqtlar[s].innerHTML.length-1)))) {
+      vaqtlar[s].style.borderColor = 'blue';
+      oxirgibosilgan = s;
+    }
+  }
+  else {
+    vaqtlar[oxirgibosilgan].style.borderColor = 'blue';
+  }
+  vaqtlar[s].addEventListener('click',()=>{
+    if(oxirgibosilgan != s) {
+      vaqtlar[oxirgibosilgan].style.borderColor = 'rgb(167, 167, 167)';
+      oxirgibosilgan = s;
+      vaqtlar[s].style.borderColor = 'blue';
+      let spancha = vaqtlar[s].innerHTML;
+      umumiyvaqt = Number(spancha.slice(0,(spancha.length-1)));
+      localStorage.setItem('vaqt',umumiyvaqt);
+    }
+  })
+  k++;
+}
+
+let tanlanganV = document.getElementById('tanlanganV');
+
+if(tanlanganV != undefined) {
+  if(localStorage.getItem('vaqt')) {
+    tanlanganV.innerHTML = localStorage.getItem('vaqt');
+  }
+  else {
+    tanlanganV.innerHTML = umumiyvaqt;
+  }
+}
