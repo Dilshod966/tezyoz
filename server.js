@@ -43,10 +43,10 @@ app.post("/signup", async (req, res) => {
 });
 
 app.post("/signin", async (req, res) => {
-  const { email, password } = req.body;
+  const { emailValue, password } = req.body;
 
   try {
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ emailValue });
     if (!user) {
       return res.json({ message: false });
     }
@@ -54,8 +54,8 @@ app.post("/signin", async (req, res) => {
     if (user.password != password) {
       return res.json({ message: 0 });
     }
-
-    res.json({ message: true , odi: user.name});
+    console.log(user.name);
+    res.json({ message: true , name: user.nameValue});
   } catch (err) {
     res.status(500).json({ error: "Xatolik yuz berdi" });
   }

@@ -2,13 +2,13 @@ xatolik = document.getElementsByClassName("xatolik");
 pas1 = document.getElementById("parol");
 pochta = document.getElementById("pochta");
 async function signin() {
-  const email = document.getElementById("pochta").value;
+  const emailValue = document.getElementById("pochta").value;
   const password = document.getElementById("parol").value;
 
   const res = await fetch("http://localhost:3000/signin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ emailValue, password }),
   });
 
   const data = await res.json();
@@ -16,8 +16,11 @@ async function signin() {
   if (data.error) {
     alert(data.error);
   } else {
-    if (data.message) {
-      localStorage.setItem("name", data.odi);
+    // console.log(data)
+    // console.log(email)
+    // console.log(password)
+    if (data.message == true) {
+      localStorage.setItem("name", data.name);
       window.location.href = "index.html";
     } else if (data.message == false) {
       pochta.style.border = "1px solid red";
