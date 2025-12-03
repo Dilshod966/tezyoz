@@ -800,6 +800,7 @@ if(maydon != undefined) {
 });
 }
 
+
 function anime() {
   let sanoq = umumiyvaqt;
   sekunds.style.display = "inline";
@@ -824,6 +825,26 @@ function anime() {
       togriSozlar,
       notogriSozlar
     );
+
+    if(localStorage.getItem('name')) {
+      
+      let sanacha = new Date();
+      let shablon = sanacha.getDay() + '/' + sanacha.getMonth() + '/' + sanacha.getFullYear() + '<br>' + sanacha.getHours() + ":" + sanacha.getMinutes() + ":" + sanacha.getSeconds();
+      natijasaqla(localStorage.getItem('name'),togriSozlar,notogriSozlar,umumiyvaqt,shablon);
+    }
+     
+
+
+
+
+
+
+
+
+
+
+
+
     document.getElementById("natija").style.display = "block";
     if (localStorage.getItem("rejim")) {
       let novidir = localStorage.getItem("rejim");
@@ -935,7 +956,7 @@ function resoultElement(vaqt, togri, notogri) {
 
 let userLoc =  document.querySelectorAll('#til ~ a');
 
-if(localStorage.getItem("name")) {
+if(localStorage.getItem("name") && document.getElementById('user') != undefined) {
     userLoc[0].style.display = 'none';
     userLoc[1].style.display = 'none';
     document.getElementById('user').innerHTML = localStorage.getItem('name');
@@ -979,4 +1000,27 @@ if(tanlanganV != undefined) {
   else {
     tanlanganV.innerHTML = umumiyvaqt;
   }
+}
+
+
+
+
+
+
+
+async function natijasaqla(username1, togrilari1, notogrilari1, umumiyvaqt1, sana1) {
+  const res = await fetch("http://localhost:3000/resoultsave", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username1, togrilari1, notogrilari1, umumiyvaqt1, sana1 }),
+    });
+
+    const data = await res.json();
+
+    if(!data.message) {
+      alert('natija saqlashda muommo')
+    }
+    if(data.error) {
+      alert(data.error)
+    }
 }

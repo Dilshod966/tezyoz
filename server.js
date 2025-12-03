@@ -23,6 +23,14 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
+const resoultSchema = new mongoose.Schema({
+  username1: String,
+  togrilari1: String,
+  notogrilari1: String,
+  umumiyvaqt1: String,
+  sana1: String,
+});
+
 const User = mongoose.model("User", userSchema);
 // 📨 signup API
 app.post("/signup", async (req, res) => {
@@ -54,12 +62,32 @@ app.post("/signin", async (req, res) => {
     if (user.password != password) {
       return res.json({ message: 0 });
     }
-    console.log(user.name);
     res.json({ message: true , name: user.nameValue});
   } catch (err) {
     res.status(500).json({ error: "Xatolik yuz berdi" });
   }
 });
+
+
+
+
+
+const Resoult = mongoose.model("Resoult", resoultSchema);
+
+app.post("/resoultsave", async (req, res) => {
+  const { username1, togrilari1, notogrilari1, umumiyvaqt1, sana1 } = req.body;
+  const natija = new Resoult({ username1, togrilari1, notogrilari1, umumiyvaqt1, sana1 });
+  try { 
+      natija.save();
+      res.json({ message: true });
+    
+  } catch (err) {
+    res.status(500).json({ error: "Xatolik yuz berdi" });
+  }
+});
+
+
+
 
 app.listen(3000, () =>
   console.log("🚀 Server http://localhost:3000 da ishlamoqda")
