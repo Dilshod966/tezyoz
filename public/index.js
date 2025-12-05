@@ -830,7 +830,7 @@ function anime() {
       
       let sanacha = new Date();
       let shablon = sanacha.getDay() + '/' + sanacha.getMonth() + '/' + sanacha.getFullYear() + '<br>' + sanacha.getHours() + ":" + sanacha.getMinutes() + ":" + sanacha.getSeconds();
-      natijasaqla(localStorage.getItem('name'),togriSozlar,notogriSozlar,umumiyvaqt,shablon);
+      natijasaqla(localStorage.getItem('name'),togriSozlar,notogriSozlar,localStorage.getItem('vaqt')?localStorage.getItem('vaqt'):umumiyvaqt,shablon);
     }
      
 
@@ -996,6 +996,7 @@ let tanlanganV = document.getElementById('tanlanganV');
 if(tanlanganV != undefined) {
   if(localStorage.getItem('vaqt')) {
     tanlanganV.innerHTML = localStorage.getItem('vaqt');
+    umumiyvaqt = Number(localStorage.getItem('vaqt'));
   }
   else {
     tanlanganV.innerHTML = umumiyvaqt;
