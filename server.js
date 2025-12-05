@@ -86,6 +86,25 @@ app.post("/resoultsave", async (req, res) => {
   }
 });
 
+app.get("/resoultall-speed", async (req, res) => {
+  try {
+    const results = await Resoult.find();
+
+    // Tezlikni hisoblab, sort qilish
+    const sorted = results
+      .map((r) => ({
+        ...r._doc,
+        tezlik: r.togrilari1 / r.umumiyvaqt1, // tezlik formula
+      }))
+      .sort((a, b) => b.tezlik - a.tezlik); // eng tez → sekin
+
+    res.json(sorted);
+
+  } catch (err) {
+    res.status(500).json({ error: "Sortlashda xatolik yuz berdi" });
+  }
+});
+
 
 
 

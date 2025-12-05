@@ -1004,11 +1004,6 @@ if(tanlanganV != undefined) {
 }
 
 
-
-
-
-
-
 async function natijasaqla(username1, togrilari1, notogrilari1, umumiyvaqt1, sana1) {
   const res = await fetch("http://localhost:3000/resoultsave", {
     method: "POST",
