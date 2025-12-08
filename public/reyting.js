@@ -43,7 +43,7 @@ async function getResultsBySpeed() {
       yangiNatija.innerHTML = `
                     <div>
                         <div>#${i+1}</div>
-                        <div><img src="" alt=""></div>
+                        <div><img src="./image/rasm.jpg" alt=""></div>
                         <div>
                             <p>${data[index].username1}</p>
                             <span>1 tugallangan test</span>
