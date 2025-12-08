@@ -107,6 +107,20 @@ app.get("/resoultall-speed", async (req, res) => {
 
 
 
+app.get("/raqobatchilar", async (req, res) => {
+  try {
+    
+    const users = await User.find();
+    // Tezlikni hisoblab, sort qilish
+
+    res.json(users.length);
+
+  } catch (err) {
+    res.status(500).json({ error: "Sortlashda xatolik yuz berdi" });
+  }
+});
+
+
 
 app.listen(3000, () =>
   console.log("🚀 Server http://localhost:3000 da ishlamoqda")

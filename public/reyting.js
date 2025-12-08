@@ -1,5 +1,21 @@
 let natijalar = document.getElementById("natijalar");
 
+async function getUsersLeng() {
+   try {
+    const res = await fetch("http://localhost:3000/raqobatchilar");
+    const data = await res.json();
+
+    document.getElementById('raqobatchilar').innerHTML = data;
+   }
+   
+   catch (err) {
+    console.log("Xatolddik:", err);
+  }
+}
+
+
+
+
 async function getResultsBySpeed() {
   try {
     const res = await fetch("http://localhost:3000/resoultall-speed");
@@ -15,12 +31,14 @@ async function getResultsBySpeed() {
         yangiNatija.setAttribute("class", "natija top3");
       }
       while(true) {
-        
+        if (!data[index]) break;
+
         if(!baza.includes(data[index].username1)) {
             break;
         }
         index++;
       }
+      if (!data[index]) break;
       yangiNatija.innerHTML = `
                     <div>
                         <div>#${i+1}</div>
@@ -43,3 +61,4 @@ async function getResultsBySpeed() {
 }
 
 getResultsBySpeed();
+getUsersLeng();
