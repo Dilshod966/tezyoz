@@ -16,6 +16,7 @@ async function getUsersLeng() {
 
 
 
+
 async function getResultsBySpeed() {
   try {
     const res = await fetch("http://localhost:3000/resoultall-speed");
@@ -62,3 +63,5 @@ async function getResultsBySpeed() {
 
 getResultsBySpeed();
 getUsersLeng();
+
+

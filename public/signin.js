@@ -16,9 +16,7 @@ async function signin() {
   if (data.error) {
     alert(data.error);
   } else {
-    // console.log(data)
-    // console.log(email)
-    // console.log(password)
+ 
     if (data.message == true) {
       localStorage.setItem("name", data.name);
       window.location.href = "index.html";
